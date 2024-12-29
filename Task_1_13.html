@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <div>
+        <label for="num1"></label>
+        <input type="number" name="num1" id="num1" placeholder="Enter number 1">
+        <br> <br>
+        <label for="num2"></label>
+        <input type="number" name="num2" id="num2" placeholder="Enter number 2">
+    </div>
+    <br>  
+    <div>
+        <button onclick="add()">Add(+)</button>
+        <button onclick="subtract()">Subtract(-)</button>
+        <button onclick="multiply()">Multiple(*)</button>
+        <button onclick="divide()">Divide(/)</button>
+        <br>
+        
+        <p id="rslt"></p>
+    </div>
+    <script>
+        function add(){
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let rslt =num1+num2;
+            document.getElementById('rslt').innerHTML='result is '+rslt;
+        }
+        function subtract(){
+            let num1=parseFloat(document.getElementById('num1').value);
+            let num2=parseFloat(document.getElementById('num2').value);
+            let rslt=num1-num2;
+            document.getElementById('rslt').innerHTML='result is '+rslt;
+        }
+        function multiply(){
+            let num1=parseFloat(document.getElementById('num1').value); 
+            let num2=parseFloat(document.getElementById('num2').value);
+            let rslt=num1*num2;
+            document.getElementById('rslt').innerHTML='result is '+rslt;
+        }
+        function divide(){
+            let num1=parseFloat(document.getElementById('num1').value);
+            let num2=parseFloat(document.getElementById('num2').value);
+            let rslt=num1/num2;
+            document.getElementById('rslt').innerHTML='result is '+rslt;;
+        }
+    </script>
+</body>
+</html>
